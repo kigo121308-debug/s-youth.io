@@ -197,6 +197,7 @@ header nav.active {
   font-size: 14px;
 }
 
+
 .home-projects h3 {
   font-size: 18px;
 }
@@ -231,13 +232,20 @@ header nav.active {
   padding: 0 15px;
 }
 
+.whysaitama ul {
+  list-style: none;
+}
+
 .whysaitama img {
   width: 100%;
 }
 
 .whysaitama h3 {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   display: inline-block;
-  font-size: 14px;
+  font-size: 18px;
   border-bottom: 2px solid #0f65e8;
 }
 
@@ -265,6 +273,10 @@ header nav.active {
 .home-news {
   margin-top: 30px;
   padding: 0 15px;
+}
+
+.home-news p:first-child {
+  font-size: 14px;
 }
 
 .home-news p {
@@ -298,6 +310,7 @@ header nav.active {
   display: block;
   padding-bottom: 5px;
   color: #000;
+  font-size: 12px;
   text-decoration: none;
 }
 
@@ -439,6 +452,7 @@ footer p small {
   }
 
   .home-projects p {
+    margin-top: 0;
     font-size: 16px;
   }
 
@@ -551,18 +565,112 @@ footer p small {
     content: '';
   }
 
-  .home-projects {
-    position: relative;
-  }
-
   .home-projects_btn_p {
-    position: absolute;
-    top: 35px;
-    right: 20px;
-  }
+    padding-top: 10px;
+  } 
 
   .home-projects_btn_p a {
     font-size: 14px;  
+  }
+
+  .whysaitama {
+    padding: 30px 20px 15px 20px;
+  }
+
+  .whysaitama ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .whysaitama li {
+    width: calc((100% - 25px) / 2);
+  }
+
+  .whysaitama h3 {
+    padding-top: 12px;
+    font-size: 24px;
+  }
+
+  .whysaitama p {
+    padding-top: 5px;
+    font-size: 14px;
+  }
+
+  .whysaitama .btn {
+    margin: 15px 0;
+    text-align: left;
+  }
+
+  .whysaitama_img {
+    order: 2;
+  }
+
+  .whysaitama_text {
+    order: 1;
+  }
+
+  .home-news {
+    padding: 0 20px;
+  }
+
+  .home-news p:first-child {
+    font-size: 16px;
+  }
+
+  .home-news h3 {
+    font-size: 24px;
+  }
+
+  .home-news_li {
+    font-size: 14px;
+  }
+
+  .home-news_li li {
+    padding: 10px 0;
+  }
+
+  .home-news_li p a {
+    font-size: 14px;
+  }
+
+  .home-news .btn a {
+    font-size: 14px;
+  }
+
+  .footer_nav {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 440px;
+  }
+
+  .footer_nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer_nav li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .footer_sns-links {
+    right: 10px;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  body {
+    padding-top: 80px;
+  }
+
+  .header {
+    height: 80px;
   }
 }
 
