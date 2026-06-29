@@ -73,7 +73,7 @@
     <section class="home-projects">
       <p>PROJECTS</p>
       <h3>多様なプロジェクトを展開</h3>
-      <ul class="home-projects_li">
+      <ul class="home-projects_li slider">
         <li>
           <img src="images/Project_inQubiz.png" alt="InQubiz">
           <div class="pc-tb_only">
@@ -103,16 +103,22 @@
     </section> <!-- /.home-projects -->
     
     <section class="whysaitama">
-      <picture>
-        <source src="images/WhySaitamapc.png" media="(min-width: 768px)">
-        <img src="images/WhySaitamasp.png" alt="なぜ埼玉で活動するのか">
-      </picture>
-      <h3>なぜ、埼玉で活動するのか。</h3>
-      <p>埼玉には、優れた人材や企業、大学、地域資源が多く存在します。
-        一方で、若者が挑戦し、社会とつながる機会は十分とは言えません。<br>
-        私たちは、若者と地域の様々なプレイヤーをつなぎ、
-        新たな価値やイノベーションが生まれる土台を作ります。</p>
-      <p class="btn"><a href="">私たちの想いを見る　→</a></p>
+      <ul>
+        <li class="whysaitama_img">
+          <picture>
+            <source srcset="images/WhySaitamapc.png" media="(min-width: 1024px)">
+            <img src="images/WhySaitamasp.png" alt="なぜ埼玉で活動するのか">
+          </picture>
+        </li>
+        <li class="whysaitama_text">
+          <h3>なぜ、埼玉で活動するのか。</h3>
+          <p>埼玉には、優れた人材や企業、大学、地域資源が多く存在します。
+            一方で、若者が挑戦し、社会とつながる機会は十分とは言えません。<br>
+            私たちは、若者と地域の様々なプレイヤーをつなぎ、
+            新たな価値やイノベーションが生まれる土台を作ります。</p>
+          <p class="btn"><a href="">私たちの想いを見る　→</a></p>
+        </li>
+      </ul>
     </section> <!-- /.whysaitama -->
 
     <section class="home-news">
@@ -155,7 +161,7 @@
     </h2>
     <nav class="footer_nav">
       <ul>
-        <li><a href="">TOP</a></li>
+        <!-- <li><a href="">TOP</a></li> -->
         <li><a href="">ABOUT</a></li>
         <li><a href="">PROJECT</a></li>
         <li><a href="">NEWS</a></li>
@@ -172,7 +178,7 @@
     </nav>
     <p class="copyright"><small>&copy; 2026 Saitama Youth Innovation Organization All Rights Reserved</small></p>
   </footer> <!-- /.footer -->
-  <script src="js/script.js"></script>
   <script src="js/jquery/jquery-4.0.0.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
