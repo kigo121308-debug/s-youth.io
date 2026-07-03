@@ -149,21 +149,25 @@ header nav.active {
   box-sizing: border-box;
 }
 
-.header_nav_snslinks img {
+.header_nav_snslinks li img {
   height: 30px;
+  transition: all .3s ease;
 }
 
 .header_nav_snslinks li:nth-child(1) {
   background: url(../images/InstagramLogo-Normal.svg) no-repeat;
 }
 
-
 .header_nav_snslinks li:nth-child(3) {
-  background: url(../images/youtube_icon-red.png) no-repeat;
+  background: url(../images/youtube_icon-red.svg) no-repeat;
 }
 
-.header_nav_snslinks li:hover img {
-  visibility: hidden;
+.header_nav_snslinks li:nth-child(1):hover img {
+  opacity: 0;
+}
+
+.header_nav_snslinks li:nth-child(3):hover img {
+  opacity: 0;
 }
 
 .key-visual_main {
@@ -357,6 +361,11 @@ header nav.active {
   display: none;
 }
 
+.footer_nav li a:hover {
+  color: #666;
+  transition: .2s;
+}
+
 .footer_sns-links {
   position: absolute;
   top: 18px;
@@ -371,6 +380,27 @@ header nav.active {
 
 .footer_sns-links img {
   height: 30px;
+}
+
+.footer_sns-links li img {
+  height: 30px;
+  transition: all .3s ease;
+}
+
+.footer_sns-links li:nth-child(1) {
+  background: url(../images/InstagramLogo-Normal.svg) no-repeat;
+}
+
+.footer_sns-links li:nth-child(3) {
+  background: url(../images/youtube_icon-red.svg) no-repeat;
+}
+
+.footer_sns-links li:nth-child(1):hover img {
+  opacity: 0;
+}
+
+.footer_sns-links li:nth-child(3):hover img {
+  opacity: 0;
 }
 
 footer .copyright {
@@ -457,7 +487,8 @@ footer p small {
   }
 
   .home-projects {
-    padding: 0 25px;
+    padding: 10px 25px;
+    text-align: center;
   }
 
   .home-projects p {
@@ -470,9 +501,10 @@ footer p small {
   }
 
   .home-projects_li {
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    text-align: left;
   }
 
   .home-projects_li li {
@@ -493,6 +525,7 @@ footer p small {
     border-bottom-right-radius: 0;
     box-shadow: none;
   }
+
   .home-projects_li .pc-tb_only {
     padding: 0 15px;
     height: 150px;
@@ -541,6 +574,11 @@ footer p small {
     right: 5px;
   }
 
+  .home-projects_li .pc-tb_only a {
+    color: #000;
+    text-decoration: none;
+  }
+
   /* List2 Soon_NewProject */
   .home-projects_li li:nth-child(2) h3 {
     padding: 17px 0 26px 5px;
@@ -573,6 +611,7 @@ footer p small {
   .home-projects_li li:nth-child(3) p:last-child::after {
     content: '';
   }
+
 
   .home-projects_btn_p {
     padding-top: 10px;
@@ -620,6 +659,7 @@ footer p small {
 
   .home-news {
     padding: 0 25px;
+    text-align: center;
   }
 
   .home-news p:first-child {
@@ -632,6 +672,7 @@ footer p small {
 
   .home-news_li {
     font-size: 14px;
+    text-align: left;
   }
 
   .home-news_li li {
@@ -670,12 +711,20 @@ footer p small {
     right: 10px;
   }
 
+  footer p small {
+    font-size: 10px;
+  }
+
 }
 
 @media screen and (min-width: 1024px) {
 
   body {
     padding-top: 80px;
+  }
+
+  .pc_only {
+    display: inline-block;
   }
 
   .header .inner {
@@ -723,22 +772,56 @@ footer p small {
     margin-top: 0;
   }
 
+  .header_menu::before {
+    position: absolute;
+    top: 70px;
+    left: calc(50% - 40px);
+    content: '';
+    background: #fff;
+    width: 80px;
+    height: 45px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom: 1px solid #d9d9d9;
+    transition: all .4s  ease;
+  }
+
+  .header_menu::after {
+      position: absolute;
+      top: 70px;
+      left: calc(50% - 20px);
+      content: url(../images/header_chevron-down.svg);
+      width: 40px;
+      height: auto;
+      transition: all .35s  ease;
+    }
+
+
   .nav_items {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -100%);
     display: flex;
     width: calc(100% - 200px);
-    height: 50px;
+    height: 60px;
     justify-content: space-evenly;
     background: #ffffff;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+    border-bottom: 1px solid #d9d9d9;
     opacity:0;
     visibility:hidden;
 
     transition:.35s;
     z-index: -1;
+  }
+
+  .header:hover .header_menu::after {
+    transform: translate(0, 65px) rotate(180deg);
+  }
+
+  .header:hover .header_menu::before {
+    transform: translate(0, 70px);
   }
 
   .header:hover .nav_items {
@@ -781,40 +864,214 @@ footer p small {
 
   .header_nav_snslinks {
     position: absolute;
-    top: 35px;
+    top: 28px;
     right: 5%;
     padding: 0;
     width: 300px;
     justify-content: space-evenly;
   }
 
-  .header_nav_snslinks::before {
+  /* .header_nav_snslinks::before {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    top: -25px;
+    right: 200px;
+    content: url(../images/Followus.svg);
+    width: 100%;
+  }
+
+  .header_nav_snslinks::after {
+    position: absolute;
+    right: 100px;
     top: -30px;
-    content: '< Follow me !! >';
-    font-size: 18px;
+    content: 'Follow us !!';
+    font-size: 22px;
     font-weight: bold;
     color: #0f65e8;
-  }
-
-  .header_nav_snslinks img {
-    height: 30px;
-  }
-
-  .header_nav_snslinks li:nth-child(1) {
-    background: url(../images/InstagramLogo-Normal.svg) no-repeat;
-    height: 35px;
-  }
-
-
-  .header_nav_snslinks li:nth-child(3) {
-    background: url(../images/youtube_icon-red.png) no-repeat;
-  }
+  } */
 
   .nav_sp {
     display: none;
   }
+
+  .key-visual_main {
+    height: 500px;
+    padding: 60px 100px 0 100px;
+  }
+
+  .key-visual_main h2 {
+    padding-bottom: 55px;
+    font-size: 35px;
+  }
+
+  .key-visual_main p {
+    font-size: 22px;
+  }
+
+  .key-visual .btn a {
+    position: absolute;
+    bottom: 60px;
+    margin: 0 100px;
+    padding: 10px 50px;
+    font-size: 22px;
+  }
+
+  .home-projects {
+    padding: 0 50px;
+  }
+
+  .home-projects p {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .home-projects h3 {
+    font-size: 28px;
+  }
+
+  .home-projects_li {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .home-projects_li li {
+    width: calc((100% - 80px) / 3);
+    border-left: 1px solid #d9d9d9;
+    border-bottom: 1px solid #dedede;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+  }
+ 
+  .home-projects_li .pc-tb_only {
+    padding: 0 15px;
+    height: 180px;
+  }
+
+  .home-projects_li h3 {
+    padding: 10px 23px;
+    font-size: 20px;
+  }
+
+  .home-projects_li h3::before {
+    top: 5px;
+  }
+
+  .home-projects_li h3::after {
+    bottom: 5px;
+  }
+  
+  .home-projects_li p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .home-projects_li p:last-child {
+    margin-top: 0;
+  }
+
+   /* List2 Soon_NewProject */
+  .home-projects_li li:nth-child(2) h3 {
+    padding: 25px 0 26px 10px;
+  }
+  .home-projects_li li:nth-child(2) p:last-child {
+    padding-left: 10px;
+  }
+  /* List3 Soon_NewProject */
+  .home-projects_li li:nth-child(3) h3 {
+    padding: 25px 0 26px 10px;
+  }
+  .home-projects_li li:nth-child(3) p:last-child {
+    padding-left: 10px;
+  }
+
+  .home-projects_btn_p {
+    padding-top: 20px;
+  } 
+
+  .home-projects_btn_p a {
+    font-size: 16px;  
+  }
+
+  .whysaitama {
+    padding: 30px 100px 15px 100px;
+  }
+
+  .whysaitama li {
+    width: calc((100% - 70px) / 2);
+  }
+
+  .whysaitama h3 {
+    padding-top: 12px;
+    font-size: 28px;
+  }
+
+  .whysaitama p {
+    padding-top: 5px;
+    font-size: 18px;
+  }
+
+  .whysaitama .btn {
+    margin: 15px 0;
+    text-align: left;
+  }
+
+  .home-news {
+    padding: 0 30px;
+  }
+
+  .home-news p:first-child {
+    font-size: 18px;
+  }
+
+  .home-news h3 {
+    font-size: 28px;
+  }
+
+  .home-news_li {
+    font-size: 16px;
+  }
+
+  .home-news_li li {
+    padding: 15px 0;
+  }
+
+  .home-news_li p a {
+    font-size: 16px;
+  }
+
+  .home-news .btn a {
+    font-size: 16px;
+  }
+
+  .footer {
+    padding: 15px 25px;
+    height: 95px;
+  }
+
+  .footer_logo img {
+    height: 50px;
+  }
+
+  .footer_nav {
+    top: 25px;
+    width: 600px;
+  }
+
+  .footer_nav .pc_only {
+    display: inline-block;
+  }
+
+  .footer_nav li a {
+    font-size: 18px;
+  }
+
+  .footer_sns-links {
+    top: 25px;
+    right: 4%;
+  }
+
+  .footer_sns-links ul {
+    justify-content: space-between;
+  }
+
 }
 
