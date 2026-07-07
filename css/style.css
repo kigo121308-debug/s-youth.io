@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
 body {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
   /* color: #333 ; */
   padding-top: 60px;
   font-size: 14px;
@@ -141,6 +144,10 @@ header nav.active {
   margin-bottom: 20px;
 }
 
+.nav_items_item span a {
+    color: #0f65e8;
+  }
+
 .header_nav_snslinks {
   padding: 10px 20px;
   display: flex;
@@ -168,6 +175,10 @@ header nav.active {
 
 .header_nav_snslinks li:nth-child(3):hover img {
   opacity: 0;
+}
+
+main {
+  flex: 1;
 }
 
 .key-visual_main {
@@ -211,7 +222,7 @@ header nav.active {
 }
 
 
-.home-projects h3 {
+.home-projects h2 {
   font-size: 18px;
 }
 
@@ -237,7 +248,7 @@ header nav.active {
 
 .home-projects_btn_p a {
   color: #000;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .whysaitama {
@@ -253,7 +264,7 @@ header nav.active {
   width: 100%;
 }
 
-.whysaitama h3 {
+.whysaitama h2 {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -264,7 +275,7 @@ header nav.active {
 
 .whysaitama p {
   margin-top: 5px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.4;
 }
 
@@ -296,13 +307,13 @@ header nav.active {
   color: #0f65e8;
 }
 
-.home-news h3 {
+.home-news h2 {
   font-size: 18px;
 }
 
 .home-news_li {
   list-style: none;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .home-news_li li + li {
@@ -323,7 +334,7 @@ header nav.active {
   display: block;
   padding-bottom: 5px;
   color: #000;
-  font-size: 12px;
+  font-size: 14px;
   text-decoration: none;
 }
 
@@ -340,7 +351,7 @@ header nav.active {
 
 .home-news .btn a {
   color: #000;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .footer {
@@ -496,7 +507,7 @@ footer p small {
     font-size: 16px;
   }
 
-  .home-projects h3 {
+  .home-projects h2 {
     font-size: 24px;
   }
 
@@ -533,7 +544,7 @@ footer p small {
   
   .home-projects_li p {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.1;
   }
 
@@ -634,7 +645,7 @@ footer p small {
     width: calc((100% - 30px) / 2);
   }
 
-  .whysaitama h3 {
+  .whysaitama h2 {
     padding-top: 12px;
     font-size: 24px;
   }
@@ -666,7 +677,7 @@ footer p small {
     font-size: 16px;
   }
 
-  .home-news h3 {
+  .home-news h2 {
     font-size: 24px;
   }
 
@@ -758,7 +769,7 @@ footer p small {
     top: 43px;
     left: 171px;
     display: block;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   header nav {
@@ -833,10 +844,6 @@ footer p small {
   .nav_items_item {
     padding-bottom: 5px;
     position: relative;
-  }
-
-  .nav_items_item span a {
-    color: #0f65e8;
   }
 
   .nav_items_item a {
@@ -924,7 +931,7 @@ footer p small {
     font-size: 18px;
   }
 
-  .home-projects h3 {
+  .home-projects h2 {
     font-size: 28px;
   }
 
@@ -999,7 +1006,7 @@ footer p small {
     width: calc((100% - 70px) / 2);
   }
 
-  .whysaitama h3 {
+  .whysaitama h2 {
     padding-top: 12px;
     font-size: 28px;
   }
@@ -1022,7 +1029,7 @@ footer p small {
     font-size: 18px;
   }
 
-  .home-news h3 {
+  .home-news h2 {
     font-size: 28px;
   }
 

@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+.aboutus {
+  padding: 15px;
+}
+
+.aboutus p {
+  color: #0f65e8;
+  font-size: 14px;
+}
+
+.aboutus h2 {
+  font-size: 18px;
+}
+
+.aboutus_main {
+  margin-top: 10px;
+  height: 100%;
+  background: url(../images/about_logosp.png) no-repeat right 20px center / contain;
+}
+
+.aboutus_main h3 {
+  font-size: 18px;
+}
+
+.aboutus_main p {
+  margin-top: 5px;
+  color: #000;
+}
+
+.ourmission {
+  padding: 15px;
+}
+
+.ourmission p {
+  color: #0f65e8;
+  font-size: 14px;
+}
+
+.ourmission h2 {
+  font-size: 18px;
+}
+
+.ourmission_li {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.ourmission_li li {
+  padding: 15px 10px;
+}
+
+.ourmission_li img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 82px;
+}
+
+.ourmission_li h3 {
+  padding-top: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.ourmission_li p {
+  color: #000;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  .aboutus {
+    padding: 15px 30px;
+  }
+
+  .aboutus p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .aboutus h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .aboutus_main {
+    margin-top: 0;
+    padding-top: 10px;
+    background: url(../images/about_logopc.png) no-repeat right 45px center / contain;
+  }
+
+  .aboutus_main h3 {
+    font-size: 22px;
+  }
+
+  .aboutus_main p {
+    margin-top: 10px;
+  }
+
+  .ourmission {
+    padding: 15px 30px;
+  }
+
+  .ourmission p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .ourmission h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .ourmission_li li {
+    padding: 15px 40px;
+    width: calc(100% / 2 );
+    box-sizing: border-box;
+  }
+
+  .ourmission_li img {
+    height: 100px;
+  }
+
+  .ourmission_li h3 {
+    font-size: 22px;
+  }
+
+  .ourmission_li p {
+    font-size: 20px;
+    text-align: left;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  .aboutus {
+    padding: 15px 50px;
+  }
+
+  .aboutus p {
+    font-size: 20px;
+  }
+
+  .aboutus h2 {
+    font-size: 28px;
+  }
+
+  .aboutus_main {
+    padding-top: 15px;
+    background: url(../images/about_logopc.png) no-repeat right 45px center / contain;
+  }
+
+  .aboutus_main h3 {
+    font-size: 24px;
+  }
+
+  .aboutus_main p {
+    margin-top: 15px;
+  }
+
+  .ourmission {
+    padding: 30px 50px;
+  }
+
+  .ourmission p {
+    font-size: 20px;
+  }
+
+  .ourmission h2 {
+    font-size: 28px;
+  }
+
+  .ourmission_li li {
+    padding: 25px 50px;
+    width: calc(100% / 3 );
+  }
+
+  .ourmission_li img {
+    height: 120px;
+  }
+
+  .ourmission_li h3 {
+    font-size: 26px;
+  }
+
+  .ourmission_li p {
+    font-size: 22px;
+  }
+
+}
