@@ -60,6 +60,10 @@ select {
   background-size: 25px;
 }
 
+select option {
+  color: #000;
+}
+
 textarea {
   height: 220px;
   padding: 20px;
