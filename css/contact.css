@@ -82,6 +82,7 @@ input:focus, textarea:focus, select:focus {
   border-radius: 10px;
   background: #0f65e8;
   color: #fff;
+  font-weight: bold;
 }
 
 .form_main button:hover {
