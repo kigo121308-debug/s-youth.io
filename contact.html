@@ -4,25 +4,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>埼玉ユースイノベーション機構</title>
-  <meta name="description" content="埼玉ユースイノベーション機構は、高校生を中心に構成された団体です。地域の課題を自分ごととして捉え、アイデアやテクノロジーを活用した解決策を生み出すことで、より良い社会の実現を目指しています。">
+  <title>埼玉ユースイノベーション機構｜お問い合わせ</title>
+  <meta name="description" content="埼玉ユースイノベーション機構へのお問い合わせはこちらから。お名前、メールアドレス、お問い合わせ種別、お問い合わせ内容を入力の上、送信をお願いいたします。">
   <meta name="keywords" content="埼玉ユースイノベーション機構,Saitama Youth Innovation Organization,SaitamaYouthInnovationOrganization,Youth,Innovation,Organization,高校生,学生,埼玉県,埼玉,さいたま,プラットフォーム,地域,地域課題,課題,プロジェクト,活動,地域資源,想い,価値,イノベーション,若者,挑戦,社会,つながる,繋がる,機会">
   <meta property="og:local" content="ja_JP">
-  <meta property="og:site_name" content="埼玉ユースイノベーション機構">
+  <meta property="og:site_name" content="埼玉ユースイノベーション機構｜お問い合わせ">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://s-youth.jp/">
-  <meta property="og:description" content="埼玉ユースイノベーション機構は、高校生を中心に構成された団体です。地域の課題を自分ごととして捉え、アイデアやテクノロジーを活用した解決策を生み出すことで、より良い社会の実現を目指しています。">
-  <meta property="og:image" content="https://s-youth.jpimages/og_Logo.png">
+  <meta property="og:description" content="埼玉ユースイノベーション機構へのお問い合わせはこちらから。お名前、メールアドレス、お問い合わせ種別、お問い合わせ内容を入力の上、送信をお願いいたします。">
+  <meta property="og:image" content="https://s-youth.jp/images/og_Logo.png">
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="埼玉ユースイノベーション機構">
+  <meta property="twitter:title" content="埼玉ユースイノベーション機構｜お問い合わせ">
   <meta property="twitter:url" content="https://s-youth.jp/">
-  <meta property="twitter:description" content="埼玉ユースイノベーション機構は、高校生を中心に構成された団体です。地域の課題を自分ごととして捉え、アイデアやテクノロジーを活用した解決策を生み出すことで、より良い社会の実現を目指しています。">
+  <meta property="twitter:description" content="埼玉ユースイノベーション機構へのお問い合わせはこちらから。お名前、メールアドレス、お問い合わせ種別、お問い合わせ内容を入力の上、送信をお願いいたします。">
   <link rel="icon" href="images/pageicon/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="images/pageicon/apple-touch-icon-180x180.png" sizes="180x180">
   <link rel="icon" type="image/png" href="images/pageicon/android-chrome-192x192.png" sizes="192x192">
   <script src="https://kit.fontawesome.com/7e3f0189e5.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
   <header class="header">
@@ -59,7 +60,62 @@
   </header> <!-- /.header -->
 
   <main>
-
+    <section class="contact_form">
+      <div class="title_contact">
+        <p>CONTACT</p>
+        <h2>お問い合わせ</h2>
+        <p>ご質問・ご相談・取材のご依頼など、<br>
+          お気軽にお問い合わせください。</p>
+      </div> <!-- /.title_contact -->
+      <div class="form_main">
+        <form id="contactForm">
+          <div class="form_group">
+            <label for="name">お名前<span class="required">必須</span></label>
+            <input type="text" id="name" name="name" required placeholder="例）山田太郎">
+          </div>
+          <div class="form_group">
+            <label for="email">メールアドレス<span class="required">必須</span></label>
+            <input type="email" id="email" name="email" required placeholder="例）example@s-youth.org">
+          </div>
+          <div class="form_group">
+            <label for="organization">所属<span>任意</span></label>
+            <input type="text" id="organization" name="organization" placeholder="例）大学名 / 企業名 / 団体名など">
+          </div>
+          <div class="form_group">
+            <label for="category">お問い合わせ種別<span class="required">必須</span></label>
+            <select id="category" name="category" required>
+              <option value="">選択してください</option>
+              <option>団体について</option>
+              <option>新規アイデアの提案</option>
+              <option>協賛について</option>
+              <option>取材について</option>
+              <option>その他</option>
+            </select>
+          </div>
+          <div class="form_group">
+            <label for="message">お問い合わせ内容<span class="required">必須</span></label>
+            <textarea id="message" name="message" rows="8" required></textarea>
+          </div>
+          <button type="submit">送信する</button>
+        </form>
+      </div> <!-- /.form_main -->
+    </section> <!-- /.contact_form -->
+    <!-- <section class="someaddress">
+      <div class="add_mail">
+        <h3>Email</h3>
+        <p>info@s-youth.org</p>
+      </div>
+      <div class="add_sns">
+        <h3>SNS</h3>
+        <nav>
+          <ul>
+            <li><a href=""><img src="images/InstagramLogo-Black.svg" alt="Instagram"></a></li>
+            <li><a href=""><img src="images/XLogo-Black.svg" alt="X"></a></li>
+            <li><a href=""><img src="images/youtube_icon-black.svg" alt="Youtube"></a></li>
+          </ul>
+        </nav>
+      </div>
+    </section> -->
   </main> <!-- /main -->
   
   <footer class="footer">
@@ -85,7 +141,24 @@
     </nav>
     <p class="copyright"><small>&copy; 2026 Saitama Youth Innovation Organization All Rights Reserved</small></p>
   </footer> <!-- /.footer -->
+  <dialog id="successModal">
+    <div class="modal-content">
+      <div class="success-icon">
+        ✓
+      </div>
+      <h2>お問い合わせありがとうございました</h2>
+      <p>
+        内容を受け付けました。<br>
+        通常3営業日以内に担当者よりご返信いたします。
+      </p>
+      <div class="modal-buttons">
+        <button id="closeModal">閉じる</button>
+        <a href="../index.html" class="home-button">トップへ戻る</a>
+      </div>
+    </div>
+  </dialog>
   <script src="js/jquery/jquery-4.0.0.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/contact.js"></script>
 </body>
 </html>

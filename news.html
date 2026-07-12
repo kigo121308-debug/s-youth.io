@@ -4,25 +4,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>埼玉ユースイノベーション機構</title>
-  <meta name="description" content="埼玉ユースイノベーション機構は、高校生を中心に構成された団体です。地域の課題を自分ごととして捉え、アイデアやテクノロジーを活用した解決策を生み出すことで、より良い社会の実現を目指しています。">
+  <title>埼玉ユースイノベーション機構｜ニュース</title>
+  <meta name="description" content="埼玉ユースイノベーション機構に関わるお知らせ・活動報告をしています。">
   <meta name="keywords" content="埼玉ユースイノベーション機構,Saitama Youth Innovation Organization,SaitamaYouthInnovationOrganization,Youth,Innovation,Organization,高校生,学生,埼玉県,埼玉,さいたま,プラットフォーム,地域,地域課題,課題,プロジェクト,活動,地域資源,想い,価値,イノベーション,若者,挑戦,社会,つながる,繋がる,機会">
   <meta property="og:local" content="ja_JP">
-  <meta property="og:site_name" content="埼玉ユースイノベーション機構">
+  <meta property="og:site_name" content="埼玉ユースイノベーション機構｜ニュース">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://s-youth.jp/">
-  <meta property="og:description" content="埼玉ユースイノベーション機構は、高校生を中心に構成された団体です。地域の課題を自分ごととして捉え、アイデアやテクノロジーを活用した解決策を生み出すことで、より良い社会の実現を目指しています。">
-  <meta property="og:image" content="https://s-youth.jpimages/og_Logo.png">
+  <meta property="og:description" content="埼玉ユースイノベーション機構に関わるお知らせ・活動報告をしています。">
+  <meta property="og:image" content="https://s-youth.jp/images/og_Logo.png">
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="埼玉ユースイノベーション機構">
+  <meta property="twitter:title" content="埼玉ユースイノベーション機構｜ニュース">
   <meta property="twitter:url" content="https://s-youth.jp/">
-  <meta property="twitter:description" content="埼玉ユースイノベーション機構は、高校生を中心に構成された団体です。地域の課題を自分ごととして捉え、アイデアやテクノロジーを活用した解決策を生み出すことで、より良い社会の実現を目指しています。">
+  <meta property="twitter:description" content="埼玉ユースイノベーション機構に関わるお知らせ・活動報告をしています。">
   <link rel="icon" href="images/pageicon/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="images/pageicon/apple-touch-icon-180x180.png" sizes="180x180">
   <link rel="icon" type="image/png" href="images/pageicon/android-chrome-192x192.png" sizes="192x192">
   <script src="https://kit.fontawesome.com/7e3f0189e5.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/news.css">
 </head>
 <body>
   <header class="header">
@@ -59,7 +60,19 @@
   </header> <!-- /.header -->
 
   <main>
-
+    <section class="news">
+      <div class="news_title">
+        <p>News</p>
+        <h2>お知らせ・活動報告</h2>
+      </div>
+      <div class="category">
+        <button class="active" data-category="all">All</button>
+        <button data-category="news">News</button>
+        <button data-category="report">Report</button>
+      </div>
+      <div id="news-list"></div>
+      <div id="pagination"></div>
+    </section> <!-- /.news -->
   </main> <!-- /main -->
   
   <footer class="footer">
@@ -87,5 +100,6 @@
   </footer> <!-- /.footer -->
   <script src="js/jquery/jquery-4.0.0.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/news.js"></script>
 </body>
 </html>
