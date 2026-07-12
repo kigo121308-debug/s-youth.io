@@ -136,6 +136,7 @@
 @media screen and (min-width: 1024px) {
 
   .aboutus {
+    margin-top: 30px;
     padding: 15px 50px;
   }
 

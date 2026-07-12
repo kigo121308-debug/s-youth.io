@@ -1,0 +1,276 @@
+@charset "UTF-8";
+
+.contact_form {
+  padding: 10px 30px;
+}
+
+.title_contact p {
+  color: #0f65e8;
+  font-size: 14px;
+}
+
+.title_contact h2 {
+  font-size: 18px;
+}
+
+.title_contact h2 + p {
+  color: #000;
+}
+
+.form_main {
+  margin-top: 20px;
+}
+
+.form_group {
+  display:flex;
+  flex-direction:column;
+  margin-bottom:32px;
+}
+
+.form_group label {
+  font-size: 16px;
+}
+
+.form_group span {
+  padding-left: 10px;
+  color: #888;
+}
+
+.form_group .required {
+  color: red;
+}
+
+label {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+input, textarea, select {
+  height: 56px;
+  border: 1px solid #999;
+  border-radius: 10px;
+  padding: 0 20px;
+  font-size: 18px;
+  transition: .3s;
+}
+
+select {
+  appearance: none;
+  background: url(../images/pulldown.svg) no-repeat right 10px center;
+  background-size: 25px;
+}
+
+textarea {
+  height: 220px;
+  padding: 20px;
+  resize: vertical;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #0f65e8;
+  box-shadow: 0 0 0 4px rgba(37,99,235,.15);
+}
+
+.form_main button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 10px 70px;
+  border: none;
+  border-radius: 10px;
+  background: #0f65e8;
+  color: #fff;
+}
+
+.form_main button:hover {
+  background: #2978f0;
+  transition: .5s;
+}
+
+/* ===== 送信完了モーダル ===== */
+
+#successModal {
+  border: none;
+  border-radius: 24px;
+  padding: 0;
+  width: min(90%,520px);
+  max-width: 520px;
+  animation: modalFade .3s ease;
+}
+
+#successModal::backdrop {
+  background: rgba(0,0,0,.45);
+  backdrop-filter: blur(6px);
+}
+
+.modal-content {
+  padding: 50px 40px;
+  text-align: center;
+}
+
+.success-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  background: #0f65e8;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-content h2 {
+  margin-bottom: 18px;
+  font-size: 20px;
+}
+
+.modal-content p {
+  line-height: 1.8;
+  color: #666;
+  font-size: 16px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.modal-buttons button, .modal-buttons a {
+  width: 180px;
+  padding: 15px;
+  border-radius: 999px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: .3s;
+}
+
+#closeModal {
+  background: #f3f3f3;
+}
+
+.home-button {
+  background: #0f65e8;
+  color: #fff;
+}
+
+#closeModal:hover {
+  background: #e6e6e6;
+}
+
+.home-button:hover {
+  opacity: .9;
+  transform: translateY(-2px);
+}
+
+@keyframes modalFade {
+    from{
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to{
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+}
+
+/* .someaddress {
+  padding: 20px 30px;
+}
+
+.someaddress p {
+  color: #0f65e8;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.someaddress h3 {
+  font-size: 20px;
+}
+
+.add_mail p {
+  margin-top: 10px;
+}
+
+.add_sns {
+  margin-top: 10px;
+}
+
+.add_sns ul {
+  margin-top: 10px;
+  display: flex;
+  width: calc(100% - 150px);
+  justify-content: space-between;
+}
+
+.add_sns ul img {
+  height: 35px;
+  transition: all .3s ease;
+}
+
+.add_sns ul li:nth-child(1) {
+  background: url(../images/InstagramLogo-Normal.svg) no-repeat;
+}
+
+.add_sns ul li:nth-child(3) {
+  background: url(../images/youtube_icon-red.svg) no-repeat;
+}
+
+.add_sns ul li:nth-child(1):hover img {
+  opacity: 0;
+}
+
+.add_sns ul li:nth-child(3):hover img {
+  opacity: 0;
+} */
+
+@media screen and (min-width: 768px) {
+
+  .title_contact p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .title_contact h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .form_main {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 80px);
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  .contact_form {
+    margin-top: 50px;
+  }
+
+  .title_contact p {
+    font-size: 18px;
+  }
+
+  .title_contact h2 {
+    font-size: 28px;
+  }
+
+  .form_main {
+    width: calc(100% - 120px);
+  }
+
+}

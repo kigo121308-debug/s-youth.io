@@ -579,7 +579,7 @@ footer p small {
   }
 
   .home-projects_li p:last-child::after {
-    content: '→';
+    content: '-->';
     position: absolute;
     bottom: 0px;
     right: 5px;
