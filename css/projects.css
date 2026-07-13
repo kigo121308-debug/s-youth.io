@@ -157,6 +157,10 @@
 
 }
 
+.project-card__category {
+  text-align: center;
+}
+
 .activity-area {
   margin-top: 20px;
 }
@@ -229,12 +233,36 @@
 }
 
 .future-together p a {
+  display: inline-block;
   position: relative;
-  padding: 10px;
+  overflow: hidden;
+  padding: 10px 20px;
   background: #0f65e8;
   border-radius: 5px;
   color: #fff;
   text-decoration: none;
+  transition: all .3s ease;
+}
+
+.future-together p a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: rgba(255, 255, 255, .35);
+  transform: skewX(-25deg);
+  transition: left .5s ease;
+}
+
+.future-together p a:hover {
+  background: #0b53c1;
+  box-shadow: 0 8px 16px rgba(15, 101, 232, .3);
+}
+
+.future-together p a:hover::before {
+  left: 140%;
 }
 
 .footer {
@@ -246,13 +274,17 @@
     padding: 15px 30px;
   }
 
-  .projects p {
+  .title_projects p {
     font-size: 16px;
     text-align: center;
   }
 
-  .projects h2 {
+  .title_projects h2 {
     font-size: 24px;
+    text-align: center;
+  }
+
+  .title_main_projects p {
     text-align: center;
   }
 
@@ -269,6 +301,10 @@
 
   .project-list {
     grid-template-columns: repeat(2,1fr);
+  }
+
+  .title_activity-area p {
+    text-align: center;
   }
 
   .activity-area h3 {
@@ -304,7 +340,7 @@
   }
 
   .future-together {
-    margin: 0 40px;
+    margin: 50px;
   }
 
   .future-together h2 {
@@ -343,7 +379,7 @@
   
   .future-together {
     position: relative;
-    margin: 0;
+    margin: 90px 0;
     height: 170px;
     width: 80%;
     left: 50%;

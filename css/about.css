@@ -76,10 +76,13 @@
 
   .aboutus p {
     font-size: 16px;
+  }
+
+  .title_aboutus p {
     text-align: center;
   }
 
-  .aboutus h2 {
+  .title_aboutus h2 {
     font-size: 24px;
     text-align: center;
   }
@@ -91,7 +94,7 @@
   }
 
   .aboutus_main h3 {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .aboutus_main p {
@@ -151,10 +154,6 @@
   .aboutus_main {
     padding-top: 15px;
     background: url(../images/about_logopc.png) no-repeat right 45px center / contain;
-  }
-
-  .aboutus_main h3 {
-    font-size: 24px;
   }
 
   .aboutus_main p {

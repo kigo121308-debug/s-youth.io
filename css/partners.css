@@ -181,12 +181,20 @@ dialog:focus-visible {
 }
 
 .join_us p a {
+  display: inline-block;
   position: relative;
-  padding: 10px;
+  padding: 10px 20px;
   background: #0f65e8;
   border-radius: 5px;
   color: #fff;
   text-decoration: none;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+  transition: all .3s ease;
+}
+
+.join_us p a:hover {
+  background: #0b53c1;
+  box-shadow: 0 8px 18px rgba(15,101,232,.35);
 }
 
 @media screen and (min-width: 768px) {
@@ -202,7 +210,7 @@ dialog:focus-visible {
   }
 
   .join_us {
-    margin: 40px;
+    margin: 50px;
   }
 
   .join_us h2 {

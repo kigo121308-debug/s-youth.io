@@ -49,11 +49,13 @@
           <li class="nav_items_item"><a href="partners.html">PARTNERS</a></li>
           <li class="nav_items_item"><span><a href="contact.html">CONTACT</a></span></li>
         </ul>
-        <ul class="header_nav_snslinks">
-          <li><a href="" target="_blank"><img src="images/InstagramLogo-Black.svg" alt="Instagram"></a></li>
-          <li><a href="" target="_blank"><img src="images/XLogo-Black.svg" alt="X"></a></li>
-          <li><a href="" target="_blank"><img src="images/youtube_icon-black.svg" alt="Youtube"></a></li>
-        </ul> 
+        <div class="header_social">
+          <ul class="header_nav_snslinks">
+            <li><a href="" target="_blank"><img src="images/InstagramLogo-Black.svg" alt="Instagram"></a></li>
+            <li><a href="" target="_blank"><img src="images/XLogo-Black.svg" alt="X"></a></li>
+            <li><a href="" target="_blank"><img src="images/youtube_icon-black.svg" alt="Youtube"></a></li>
+          </ul> 
+        </div> 
       </nav>
         
     </div> <!-- /.inner -->
@@ -61,44 +63,46 @@
 
   <main>
     <section class="contact_form">
-      <div class="title_contact">
+      <div class="title_contact fade-up">
         <p>CONTACT</p>
         <h2>お問い合わせ</h2>
         <p>ご質問・ご相談・取材のご依頼など、<br>
           お気軽にお問い合わせください。</p>
       </div> <!-- /.title_contact -->
-      <div class="form_main">
-        <form id="contactForm">
-          <div class="form_group">
-            <label for="name">お名前<span class="required">必須</span></label>
-            <input type="text" id="name" name="name" required placeholder="例）山田太郎">
-          </div>
-          <div class="form_group">
-            <label for="email">メールアドレス<span class="required">必須</span></label>
-            <input type="email" id="email" name="email" required placeholder="例）example@s-youth.org">
-          </div>
-          <div class="form_group">
-            <label for="organization">所属<span>任意</span></label>
-            <input type="text" id="organization" name="organization" placeholder="例）大学名 / 企業名 / 団体名など">
-          </div>
-          <div class="form_group">
-            <label for="category">お問い合わせ種別<span class="required">必須</span></label>
-            <select id="category" name="category" required>
-              <option value="">選択してください</option>
-              <option>団体について</option>
-              <option>新規アイデアの提案</option>
-              <option>協賛について</option>
-              <option>取材について</option>
-              <option>その他</option>
-            </select>
-          </div>
-          <div class="form_group">
-            <label for="message">お問い合わせ内容<span class="required">必須</span></label>
-            <textarea id="message" name="message" rows="8" required></textarea>
-          </div>
-          <button type="submit">送信する</button>
-        </form>
-      </div> <!-- /.form_main -->
+      <div class="zoom-in">
+        <div class="form_main">
+          <form id="contactForm">
+            <div class="form_group">
+              <label for="name">お名前<span class="required">必須</span></label>
+              <input type="text" id="name" name="name" required placeholder="例）山田太郎">
+            </div>
+            <div class="form_group">
+              <label for="email">メールアドレス<span class="required">必須</span></label>
+              <input type="email" id="email" name="email" required placeholder="例）example@s-youth.org">
+            </div>
+            <div class="form_group">
+              <label for="organization">所属<span>任意</span></label>
+              <input type="text" id="organization" name="organization" placeholder="例）大学名 / 企業名 / 団体名など">
+            </div>
+            <div class="form_group">
+              <label for="category">お問い合わせ種別<span class="required">必須</span></label>
+              <select id="category" name="category" required>
+                <option value="">選択してください</option>
+                <option>団体について</option>
+                <option>新規アイデアの提案</option>
+                <option>協賛について</option>
+                <option>取材について</option>
+                <option>その他</option>
+              </select>
+            </div>
+            <div class="form_group">
+              <label for="message">お問い合わせ内容<span class="required">必須</span></label>
+              <textarea id="message" name="message" rows="8" required></textarea>
+            </div>
+            <button type="submit">送信する</button>
+          </form>
+        </div> <!-- /.form_main -->
+      </div>
     </section> <!-- /.contact_form -->
     <!-- <section class="someaddress">
       <div class="add_mail">

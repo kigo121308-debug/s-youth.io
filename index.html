@@ -57,11 +57,13 @@
           <li class="nav_items_item"><a href="partners.html">PARTNERS</a></li>
           <li class="nav_items_item"><a href="contact.html">CONTACT</a></li>
         </ul>
-        <ul class="header_nav_snslinks">
-          <li><a href="" target="_blank"><img src="images/InstagramLogo-Black.svg" alt="Instagram"></a></li>
-          <li><a href="" target="_blank"><img src="images/XLogo-Black.svg" alt="X"></a></li>
-          <li><a href="" target="_blank"><img src="images/youtube_icon-black.svg" alt="Youtube"></a></li>
-        </ul> 
+        <div class="header_social">
+          <ul class="header_nav_snslinks">
+            <li><a href="" target="_blank"><img src="images/InstagramLogo-Black.svg" alt="Instagram"></a></li>
+            <li><a href="" target="_blank"><img src="images/XLogo-Black.svg" alt="X"></a></li>
+            <li><a href="" target="_blank"><img src="images/youtube_icon-black.svg" alt="Youtube"></a></li>
+          </ul> 
+        </div>
       </nav>
         
     </div> <!-- /.inner -->
@@ -80,29 +82,36 @@
     </section> <!-- /.key-visual -->
       
     <section class="home-projects">
-      <div class="title_home-projects">
+      <div class="title_home-projects fade-up">
         <p>PROJECTS</p>
         <h2>多様なプロジェクトを展開</h2>
       </div>
-      <div id="featuredProjectsSlider" class="splide">
+      <div id="featuredProjectsSlider" class="splide zoom-in">
         <div class="splide__track">
           <ul class="splide__list" id="featuredProjects">
             <!-- JavaScriptで生成 -->
           </ul>
         </div>
       </div>
-      <p class="home-projects_btn_p"><a href="projects.html">すべてのプロジェクトを見る　>></a></p>
+      <p class="home-projects_btn_p">
+        <a href="projects.html">
+          <span>すべてのプロジェクトを見る</span>
+          <span class="circle-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </a>
+      </p>
     </section> <!-- /.home-projects -->
     
     <section class="whysaitama">
       <ul>
-        <li class="whysaitama_img">
+        <li class="whysaitama_img fade-left">
           <picture>
             <source srcset="images/WhySaitamapc.png" media="(min-width: 1024px)">
             <img src="images/WhySaitamasp.png" alt="なぜ埼玉で活動するのか">
           </picture>
         </li>
-        <li class="whysaitama_text">
+        <li class="whysaitama_text fade-right">
           <h2>なぜ、埼玉で活動するのか。</h2>
           <p>埼玉には、優れた人材や企業、大学、地域資源が多く存在します。
             一方で、若者が挑戦し、社会とつながる機会は十分とは言えません。<br>
@@ -113,14 +122,19 @@
       </ul>
     </section> <!-- /.whysaitama -->
 
-    <section class="home-news">
+    <section class="home-news fade-up">
       <p>NEWS</p>
       <h2>お知らせ・活動報告</h2>
       <ul class="home-news_li" id="home-news-list">
 
       </ul>
-      <p class="btn">
-          <a href="news.html">すべて見る >></a>
+      <p class="btn fade-up">
+        <a href="news.html">
+          <span>すべて見る</span>
+          <span class="circle-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </a>
       </p>
     </section>
   </main> <!-- /main -->
