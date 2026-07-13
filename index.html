@@ -22,6 +22,7 @@
   <link rel="icon" type="image/png" href="images/pageicon/android-chrome-192x192.png" sizes="192x192">
   <script src="https://kit.fontawesome.com/7e3f0189e5.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script type="application/ld+json">
       {
@@ -81,38 +82,17 @@
     <section class="home-projects">
       <p>PROJECTS</p>
       <h2>多様なプロジェクトを展開</h2>
-      <ul class="home-projects_li slider">
-        <li>
-          <img src="images/projects/Project_inQubiz.png" alt="InQubiz">
-          <div class="pc-tb_only">
-            <a href="https://inqubiz.main.jp/" target="_blank">
-              <p>高校生向けビジネスコンテスト</p>
-              <h3>InQubiz</h3>
-              <p>InQubizは、高校生に探求・ビジネスのきっかけや、原体験を提供することを目的としたコンテストです。</p>
-            </a>
-          </div>
-        </li>
-        <li>
-          <img src="images/projects/SoonNewProject.png" alt="Soon_NewProject">
-          <div class="pc-tb_only">
-            <a href="">
-              <p></p>
-              <h3>新規プロジェクト準備中</h3>
-              <p>続報をお待ちください！</p>
-            </a>
-          </div>
-        </li>
-        <li class="pc_only">
-          <img src="images/projects/SoonNewProject.png" alt="Soon_NewProject">
-          <div class="pc-tb_only">
-            <a href="">
-              <p></p>
-              <h3>新規プロジェクト準備中</h3>
-              <p>続報をお待ちください！</p>
-            </a>
-          </div>
-        </li>
-      </ul>
+      <div id="featuredProjectsSlider" class="splide">
+
+        <div class="splide__track">
+
+          <ul class="splide__list" id="featuredProjects">
+            <!-- JavaScriptで生成 -->
+          </ul>
+
+        </div>
+
+      </div>
       <p class="home-projects_btn_p"><a href="projects.html">すべてのプロジェクトを見る　>></a></p>
     </section> <!-- /.home-projects -->
     
@@ -139,7 +119,7 @@
       <p>NEWS</p>
       <h2>お知らせ・活動報告</h2>
       <ul class="home-news_li" id="home-news-list">
-        
+
       </ul>
       <p class="btn">
           <a href="news.html">すべて見る >></a>
@@ -172,6 +152,9 @@
   </footer> <!-- /.footer -->
   <script src="js/jquery/jquery-4.0.0.min.js"></script>
   <script src="js/script.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/top-news.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+  <script src="js/top-projects.js"></script>
 </body>
 </html>

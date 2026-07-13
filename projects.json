@@ -1,0 +1,45 @@
+[
+  {
+    "id": "inqubiz",
+    "title": "InQubiz",
+    "subtitle": "高校生向けビジネスコンテスト",
+    "description": "InQubizは、高校生に探究・ビジネスのきっかけや原体験を提供することを目的としたコンテストです。",
+    "image": "images/projects/Project_inQubiz.png",
+    "url": "https://inqubiz.main.jp/",
+    "status": "active",
+    "featured":true
+  },
+
+  {
+    "id": "coming-soon",
+    "title": "新規プロジェクト準備中",
+    "subtitle": "",
+    "description": "続報をお待ちください！",
+    "image": "images/projects/SoonNewProject.png",
+    "url": "",
+    "status": "coming-soon",
+    "featured":true
+  },
+
+  {
+    "id": "coming-soon",
+    "title": "新規プロジェクト準備中",
+    "subtitle": "",
+    "description": "続報をお待ちください！",
+    "image": "images/projects/SoonNewProject.png",
+    "url": "",
+    "status": "coming-soon",
+    "featured":true
+  },
+
+  {
+    "id": "coming-soon",
+    "title": "新規プロジェクト準備中",
+    "subtitle": "",
+    "description": "続報をお待ちください！",
+    "image": "images/projects/SoonNewProject.png",
+    "url": "",
+    "status": "coming-soon",
+    "featured":false
+  }
+]
