@@ -468,7 +468,7 @@ main {
 
 .home-news {
   margin-top: 30px;
-  padding: 0 20px;
+  padding: 0 20px 20px;
 }
 
 .home-news p:first-child {
@@ -727,7 +727,7 @@ footer p small {
   }
 
   .home-news {
-    padding: 0 25px;
+    padding: 0 25px 20px;
     text-align: center;
   }
 
@@ -1068,7 +1068,7 @@ footer p small {
   }
 
   .home-news {
-    padding: 0 30px;
+    padding: 0 30px 20px;
   }
 
   .home-news p:first-child {

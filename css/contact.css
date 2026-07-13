@@ -86,6 +86,7 @@ input:focus, textarea:focus, select:focus {
   border-radius: 10px;
   background: #0f65e8;
   color: #fff;
+  font-size: 18px;
   font-weight: bold;
 }
 
