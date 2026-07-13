@@ -3,6 +3,7 @@
 let ITEMS_PER_PAGE = getItemsPerPage();
 
 let projects = [];
+let filteredProjects = [];
 let currentPage = 1;
 
 /**
@@ -37,6 +38,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     projects = await response.json();
 
+    filteredProjects = [...projects];
+
+    createFilterButtons();
+
     renderProjects(currentPage);
     renderPagination();
 
@@ -57,7 +62,7 @@ function renderProjects(page) {
   const start = (page - 1) * ITEMS_PER_PAGE;
   const end = start + ITEMS_PER_PAGE;
 
-  const pageProjects = projects.slice(start, end);
+  const pageProjects = filteredProjects.slice(start, end);
 
   pageProjects.forEach(project => {
 
@@ -76,7 +81,7 @@ function renderPagination() {
 
   pagination.innerHTML = '';
 
-  const totalPages = Math.ceil(projects.length / ITEMS_PER_PAGE);
+  const totalPages = Math.ceil(filteredProjects.length / ITEMS_PER_PAGE);
 
   // 前へ
   if (currentPage > 1) {
@@ -205,6 +210,77 @@ function createProjectCard(project) {
 
     </li>
   `;
+
+}
+
+function createFilterButtons() {
+
+  const filter = document.getElementById('projectFilter');
+
+  filter.innerHTML = '';
+
+  filter.insertAdjacentHTML(
+    'beforeend',
+    `<button class="filter-btn active" data-category="all">すべて</button>`
+  );
+
+  const categories = [...new Map(
+    projects.map(project => [
+      project.category,
+      project.categoryName
+    ])
+  ).entries()];
+
+  categories.forEach(([category, categoryName]) => {
+
+    filter.insertAdjacentHTML(
+      'beforeend',
+      `
+      <button class="filter-btn" data-category="${category}">
+        ${categoryName}
+      </button>
+      `
+    );
+
+  });
+
+  addFilterEvents();
+
+}
+
+function addFilterEvents() {
+
+  document.querySelectorAll('.filter-btn').forEach(button => {
+
+    button.addEventListener('click', () => {
+
+      document.querySelector('.filter-btn.active')
+        ?.classList.remove('active');
+
+      button.classList.add('active');
+
+      const category = button.dataset.category;
+
+      if (category === 'all') {
+
+        filteredProjects = [...projects];
+
+      } else {
+
+        filteredProjects = projects.filter(project =>
+          project.category === category
+        );
+
+      }
+
+      currentPage = 1;
+
+      renderProjects(currentPage);
+      renderPagination();
+
+    });
+
+  });
 
 }
 

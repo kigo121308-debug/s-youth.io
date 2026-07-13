@@ -214,19 +214,12 @@ main {
 .home-projects {
   margin-top: 10px;
   padding: 0 20px;
+  overflow:hidden;
 }
 
 .title_home-projects p {
   color: #0f65e8;
   font-size: 14px;
-}
-
-#featuredProjectsSlider {
-  margin-top: 40px;
-}
-
-#featuredProjectsSlider .splide__slide {
-  padding: 10px;
 }
 
 .project-card {
@@ -272,12 +265,18 @@ main {
   line-height: 1.6;
 }
 
+.splide{
+  width:100%;
+  max-width:100%;
+}
+
 #featuredProjectsSlider {
-  margin-top: 40px;
+  width:100%;
+  max-width:100%;
 }
 
 #featuredProjectsSlider .splide__track {
-  overflow: visible;
+  overflow: hidden;
 }
 
 #featuredProjectsSlider .splide__slide {
@@ -763,6 +762,8 @@ footer p small {
     z-index: -1;
   }
 
+  @media (hover: hover) and (pointer: fine) {
+
   .header:hover .header_menu::after {
     transform: translate(0, 65px) rotate(180deg);
   }
@@ -772,6 +773,22 @@ footer p small {
   }
 
   .header:hover .nav_items {
+    transform:translate(-50%, 0);
+    opacity:1;
+    visibility:visible;
+  }
+
+  }
+
+  .header.open .header_menu::after {
+    transform: translate(0, 65px) rotate(180deg);
+  }
+
+  .header.open .header_menu::before {
+    transform: translate(0, 70px);
+  }
+
+  .header.open .nav_items {
     transform:translate(-50%, 0);
     opacity:1;
     visibility:visible;

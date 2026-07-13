@@ -2,6 +2,8 @@
   {
     "id": "inqubiz",
     "title": "InQubiz",
+    "category": "contest",
+    "categoryName": "コンテスト",
     "subtitle": "高校生向けビジネスコンテスト",
     "description": "InQubizは、高校生に探究・ビジネスのきっかけや原体験を提供することを目的としたコンテストです。",
     "image": "images/projects/Project_inQubiz.png",
@@ -11,8 +13,10 @@
   },
 
   {
-    "id": "coming-soon",
-    "title": "新規プロジェクト準備中",
+    "id": "event-1",
+    "title": "イベント",
+    "category": "event",
+    "categoryName": "イベント",
     "subtitle": "",
     "description": "続報をお待ちください！",
     "image": "images/projects/SoonNewProject.png",
@@ -22,8 +26,10 @@
   },
 
   {
-    "id": "coming-soon",
+    "id": "coming-soon-1",
     "title": "新規プロジェクト準備中",
+    "category": "coming-soon",
+    "categoryName": "準備中",
     "subtitle": "",
     "description": "続報をお待ちください！",
     "image": "images/projects/SoonNewProject.png",
@@ -33,8 +39,10 @@
   },
 
   {
-    "id": "coming-soon",
-    "title": "新規プロジェクト準備中",
+    "id": "coming-soon-2",
+    "title": "新規プロジェクト準備中終了",
+    "category": "end",
+    "categoryName": "終了",
     "subtitle": "",
     "description": "続報をお待ちください！",
     "image": "images/projects/SoonNewProject.png",
