@@ -363,6 +363,11 @@ main {
   font-size: 14px;
 }
 
+.home-news_li li:hover {
+  background: #0f66e828;
+  transition: .5s;
+}
+
 .home-news_li li + li {
   padding-top: 10px;
   border-top: 1px solid #d9d9d9;
