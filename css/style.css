@@ -384,12 +384,13 @@ main {
   color: #000;
   font-size: 14px;
   text-decoration: none;
+  width: calc(100% - 25px);
 }
 
 .home-news_li p a::after {
   content: url(../images/News_Newtab_icon.svg);
   position: absolute;
-  right: 0;
+  right: -25px;
 }
 
 .home-news .btn {
