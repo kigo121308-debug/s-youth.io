@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const container = document.getElementById('featuredProjects');
 
     try{
-        const response = await fetch('projects.json');
+        const response = await fetch('data/projects.json');
         const projects = await response.json();
         const featuredProjects = projects.filter(project => project.featured).slice(0, 5);
 

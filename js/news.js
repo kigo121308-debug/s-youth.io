@@ -10,7 +10,7 @@ let newsData = [];
 let currentPage = 1;
 let currentCategory = "all";
 
-fetch("news.json")
+fetch("data/news.json")
 .then(response => response.json())
 .then(data => {
 

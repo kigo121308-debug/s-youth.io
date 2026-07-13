@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   try {
 
-    const response = await fetch('projects.json');
+    const response = await fetch('data/projects.json');
 
     if (!response.ok) {
       throw new Error('projects.jsonの読み込みに失敗しました');
