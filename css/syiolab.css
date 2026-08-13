@@ -1,0 +1,721 @@
+@charset "UTF-8";
+
+.syiolab {
+  --syio-blue: #3f9bcf;
+  --syio-green: #37a376;
+  --syio-pink: #e66a8c;
+  --syio-red: #fd3a3a;
+  --syio-orange: #f4ae4c;
+  --syio-black: #222;
+  --syio-gray: #666;
+  --syio-light: #f7f9f8;
+  overflow: hidden;
+  color: var(--syio-black);
+  background: #fff;
+}
+
+.syiolab-container {
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.syiolab img {
+  display: block;
+  width: 100%;
+}
+
+.syiolab a {
+  text-decoration: none;
+}
+
+.syiolab-section-heading {
+  margin-bottom: 40px;
+}
+
+.syiolab-section-heading__en {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--syio-green);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0.16em;
+}
+
+.syiolab-section-heading__title {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.03em;
+}
+
+.syiolab-section-heading__description {
+  margin-top: 16px;
+  color: var(--syio-gray);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.syiolab-key_visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100svh;
+  overflow: hidden;
+  background: #fff;
+}
+
+.syiolab-key_visual__bg {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.syiolab-key_visual__bg--blue {
+  top: -120px;
+  left: -100px;
+  width: 260px;
+  height: 260px;
+  background: var(--syio-blue);
+  opacity: 0.12;
+}
+
+.syiolab-key_visual__bg--green {
+  top: 15%;
+  right: -100px;
+  width: 280px;
+  height: 280px;
+  background: var(--syio-green);
+  opacity: 0.12;
+}
+
+.syiolab-key_visual__bg--pink {
+  right: 15%;
+  bottom: -130px;
+  width: 300px;
+  height: 300px;
+  background: var(--syio-pink);
+  opacity: 0.12;
+}
+
+.syiolab-key_visual__bg--orange {
+  bottom: 15%;
+  left: -120px;
+  width: 220px;
+  height: 220px;
+  background: var(--syio-orange);
+  opacity: 0.12;
+}
+
+.syiolab-key_visual__inner {
+  position: relative;
+  z-index: 1;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+.syiolab-key_visual__label {
+  margin-bottom: 28px;
+  color: var(--syio-green);
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.6;
+  letter-spacing: 0.14em;
+}
+
+.syiolab-key_visual__logo {
+  width: min(100%, 480px);
+}
+
+.syiolab-key_visual__logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.syiolab-key_visual__catch {
+  margin-top: 40px;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+
+.syiolab-key_visual__message {
+  margin-top: 24px;
+  color: var(--syio-gray);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.syiolab-about {
+  position: relative;
+  padding: 80px 0;
+  background: var(--syio-light);
+}
+
+.syiolab-about::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background:
+    linear-gradient(
+      90deg,
+      var(--syio-blue),
+      var(--syio-green),
+      var(--syio-pink),
+      var(--syio-red),
+      var(--syio-orange)
+    );
+  content: "";
+}
+
+.syiolab-about__content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.syiolab-about__image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.syiolab-about__image::after {
+  position: absolute;
+  inset: 0;
+  border: 3px solid rgba(255,255,255,0.7);
+  border-radius: inherit;
+  content: "";
+  pointer-events: none;
+}
+
+.syiolab-about__image img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.syiolab-about__text h3 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.syiolab-about__text p {
+  color: var(--syio-gray);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.syiolab-concept {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.syiolab-concept__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.syiolab-concept-card {
+  position: relative;
+  min-height: 220px;
+  padding: 28px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--syio-light);
+}
+
+.syiolab-concept-card::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  content: "";
+}
+
+.syiolab-concept-card:nth-child(1)::before {
+  background: var(--syio-blue);
+}
+
+.syiolab-concept-card:nth-child(2)::before {
+  background: var(--syio-green);
+}
+
+.syiolab-concept-card:nth-child(3)::before {
+  background: var(--syio-pink);
+}
+
+.syiolab-concept-card:nth-child(4)::before {
+  background: var(--syio-orange);
+}
+
+.syiolab-concept-card__number {
+  display: block;
+  margin-bottom: 35px;
+  color: var(--syio-gray);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.syiolab-concept-card h3 {
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.syiolab-concept-card p {
+  max-width: 280px;
+  color: var(--syio-gray);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.syiolab-projects {
+  padding: 80px 0;
+  background: var(--syio-light);
+}
+
+.syiolab-project-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.syiolab-project-list .project-item {
+  min-width: 0;
+}
+
+.syiolab-project-list .project-card {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(30, 70, 60, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.syiolab-project-list .project-card__image {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.syiolab-project-list .project-card__body {
+  padding: 22px;
+}
+
+.syiolab-project-list .project-card__category {
+  margin-bottom: 7px;
+  color: var(--syio-green);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+
+.syiolab-project-list .project-card__title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.syiolab-project-list .project-card__description {
+  color: var(--syio-gray);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.syiolab-join {
+  position: relative;
+  overflow: hidden;
+  padding: 90px 0;
+  color: #fff;
+  background: var(--syio-green);
+  text-align: center;
+}
+
+.syiolab-join::before {
+  position: absolute;
+  top: -100px;
+  left: -80px;
+  width: 220px;
+  height: 220px;
+  background: var(--syio-blue);
+  border-radius: 50%;
+  opacity: 0.7;
+  content: "";
+}
+
+.syiolab-join::after {
+  position: absolute;
+  right: -100px;
+  bottom: -150px;
+  width: 250px;
+  height: 250px;
+  background: var(--syio-orange);
+  border-radius: 50%;
+  opacity: 0.7;
+  content: "";
+}
+
+.syiolab-join .syiolabo-container {
+  position: relative;
+  z-index: 1;
+}
+
+.syiolab-join__label {
+  margin-bottom: 18px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.syiolab-join__title {
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+.syiolab-join__description {
+  max-width: 500px;
+  margin: 24px auto 0;
+  color: rgba(255,255,255,0.85);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.syiolab-join__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 45px;
+  min-width: 200px;
+  margin-top: 35px;
+  padding: 16px 20px;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  background: #fff;
+  color: var(--syio-green);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.syiolab-join__button span {
+  font-size: 17px;
+}
+
+.footer {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+
+  .syiolab-container {
+    width: calc(100% - 80px);
+  }
+
+  .syiolab-section-heading {
+    margin-bottom: 55px;
+  }
+
+  .syiolab-section-heading__en {
+    font-size: 16px;
+  }
+
+  .syiolab-section-heading__title {
+    font-size: 42px;
+  }
+
+  .syiolab-section-heading__description {
+    font-size: 16px;
+  }
+
+  .syiolab-key_visual__inner {
+    width: min(1200px, calc(100% - 120px));
+  }
+
+  .syiolab-key_visual__label {
+    font-size: 12px;
+  }
+
+  .syiolab-key_visual__logo {
+    width: min(45vw, 650px);
+  }
+
+  .syiolab-key_visual__catch {
+    margin-top: 50px;
+    font-size: 44px;
+  }
+
+  .syiolab-key_visual__message {
+    font-size: 16px;
+  }
+
+  .syiolab-key_visual__bg--blue {
+    top: -180px;
+    left: -150px;
+    width: 550px;
+    height: 550px;
+  }
+
+  .syiolab-key_visual__bg--green {
+    top: 10%;
+    right: -180px;
+    width: 600px;
+    height: 600px;
+  }
+
+  .syiolab-key_visual__bg--pink {
+    right: 15%;
+    bottom: -250px;
+    width: 700px;
+    height: 700px;
+  }
+
+  .syiolab-key_visual__bg--orange {
+    bottom: 15%;
+    left: -180px;
+    width: 450px;
+    height: 450px;
+  }
+
+  .syiolab-about {
+    padding: 110px 0;
+  }
+
+  .syiolab-about__text h3 {
+    font-size: 25px;
+  }
+
+  .syiolab-about__text p {
+    font-size: 16px;
+  }
+
+  .syiolab-about__content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .syiolab-concept {
+    padding: 110px 0;
+  }
+
+  .syiolab-concept__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .syiolab-concept-card__number {
+    font-size: 16px;
+  }
+
+  .syiolab-concept-card p {
+    font-size: 16px;
+  }
+
+  .syiolab-projects {
+    padding: 110px 0;
+  }
+
+  .syiolab-project-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .syiolab-project-list .project-card__category {
+    font-size: 16px;
+  }
+
+  .syiolab-project-list .project-card__title {
+    font-size: 22px;
+  }
+
+  .syiolab-project-list .project-card__description {
+    font-size: 16px;
+  }
+
+  .syiolab-join {
+    padding: 120px 0;
+  }
+
+  .syiolab-join__title {
+    font-size: 42px;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  .syiolab-container {
+    width: min(1200px, calc(100% - 120px));
+  }
+
+  .syiolab-about,
+  .syiolab-concept,
+  .syiolab-projects {
+    padding: 140px 0;
+  }
+
+  .syiolab-section-heading {
+    margin-bottom: 70px;
+  }
+
+  .syiolab-section-heading__en {
+    font-size: 18px;
+  }
+
+  .syiolab-section-heading__title {
+    font-size: 52px;
+  }
+
+  .syiolab-section-heading__description {
+    font-size: 18px;
+  }
+
+  .syiolab-key_visual__inner {
+    width: min(1200px, calc(100% - 120px));
+  }
+
+  .syiolab-key_visual__label {
+    font-size: 14px;
+  }
+
+  .syiolab-key_visual__logo {
+    width: min(45vw, 650px);
+  }
+
+  .syiolab-key_visual__catch {
+    margin-top: 50px;
+    font-size: 44px;
+  }
+
+  .syiolab-key_visual__message {
+    font-size: 18px;
+  }
+
+  .syiolab-key_visual__bg--blue {
+    top: -180px;
+    left: -150px;
+    width: 550px;
+    height: 550px;
+  }
+
+  .syiolab-key_visual__bg--green {
+    top: 10%;
+    right: -180px;
+    width: 600px;
+    height: 600px;
+  }
+
+  .syiolab-key_visual__bg--pink {
+    right: 15%;
+    bottom: -250px;
+    width: 700px;
+    height: 700px;
+  }
+
+  .syiolab-key_visual__bg--orange {
+    bottom: 15%;
+    left: -180px;
+    width: 450px;
+    height: 450px;
+  }
+
+  .syiolab-about__text h3 {
+    font-size: 26px;
+  }
+
+  .syiolab-about__text p {
+    font-size: 18px;
+  }
+
+  .syiolab-about__content {
+    gap: 90px;
+  }
+
+  .syiolab-concept__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .syiolab-concept-card {
+    min-height: 280px;
+    padding: 35px;
+  }
+
+  .syiolab-concept-card p {
+    font-size: 18px;
+  }
+
+  .syiolab-concept-card__number {
+    font-size: 18px;
+  }
+
+  .syiolab-project-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .syiolab-project-list .project-card__category {
+    font-size: 18px;
+  }
+
+  .syiolab-project-list .project-card__title {
+    font-size: 24px;
+  }
+
+  .syiolab-project-list .project-card__description {
+    font-size: 18px;
+  }
+
+  .syiolab-project-list .project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(30, 70, 60, 0.14);
+  }
+  .syiolab-join {
+    padding: 150px 0;
+  }
+
+  .syiolab-join__title {
+    font-size: 52px;
+  }
+
+  .syiolab-join__description {
+    font-size: 14px;
+  }
+
+  .syiolab-join__button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .syiolab-project-list .project-card,
+  .syiolab-join__button {
+    transition: none;
+  }
+
+}

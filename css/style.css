@@ -12,49 +12,6 @@ body {
   letter-spacing: 1px;
 }
 
-.pc_only {
-  display: none;
-}
-
-.pc-tb_only {
-  display: none;
-}
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 60px;
-  background: #fff;
-  border-bottom: 1px solid #d9d9d9;
-  z-index: 100;
-}
-
-.header .inner {
-  padding: 0 20px;
-  position: relative;
-}
-
-.header .logo {
-  padding-top: 5px;
-}
-
-.header .logo img {
-  height: 40px;
-}
-
-.header h2 {
-  position: relative;
-  top: -6px;
-  font-size: 9px;
-}
-
-.title_pc {
-  display: none;
-}
-
 /* ===========================
    Scroll Animation
 =========================== */
@@ -116,6 +73,49 @@ body {
 .zoom-in.show{
     opacity:1;
     transform:scale(1);
+}
+
+.pc_only {
+  display: none;
+}
+
+.pc-tb_only {
+  display: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px solid #d9d9d9;
+  z-index: 100;
+}
+
+.header .inner {
+  padding: 0 20px;
+  position: relative;
+}
+
+.header .logo {
+  padding-top: 5px;
+}
+
+.header .logo img {
+  height: 40px;
+}
+
+.header h2 {
+  position: relative;
+  top: -6px;
+  font-size: 9px;
+}
+
+.title_pc {
+  display: none;
 }
 
 header nav {
@@ -340,76 +340,76 @@ main {
 
 /* 共通 */
 .home-projects_btn_p,
-.home-news .btn{
-    margin-top:24px;
-    padding-right:30px;
-    text-align:right;
+.home-news .btn {
+  margin-top: 24px;
+  padding-right: 30px;
+  text-align: right;
 }
 
 .home-projects_btn_p a,
-.home-news .btn a{
-    display:inline-flex;
-    align-items:center;
-    gap:16px;
-    position:relative;
-    color:#000;
-    text-decoration:none;
-    font-weight:600;
-    transition:.35s ease;
+.home-news .btn a {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .35s ease;
 }
 
 /* 下線 */
 .home-projects_btn_p a::before,
-.home-news .btn a::before{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-6px;
-    width:100%;
-    height:2px;
-    background:#0f65e8;
-    transform:scaleX(0);
-    transform-origin:left;
-    transition:.35s;
+.home-news .btn a::before {
+  content:"";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #0f65e8;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: .35s;
 }
 
-.home-projects_btn_p a::before{
-    bottom: 0;
+.home-projects_btn_p a::before {
+  bottom: 0;
 }
 
-.home-projects_btn_p a{
-    padding-bottom:8px;
+.home-projects_btn_p a {
+  padding-bottom: 8px;
 }
 
 /* 丸 */
-.circle-arrow{
-    width:34px;
-    height:34px;
-    border:1.5px solid #0f65e8;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#0f65e8;
-    transition:.35s;
+.circle-arrow {
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid #0f65e8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0f65e8;
+  transition: .35s;
 }
 
 /* ホバー */
 .home-projects_btn_p a:hover,
-.home-news .btn a:hover{
-    color:#0f65e8;
+.home-news .btn a:hover {
+  color: #0f65e8;
 }
 
 .home-projects_btn_p a:hover::before,
-.home-news .btn a:hover::before{
-    transform:scaleX(1);
+.home-news .btn a:hover::before {
+  transform: scaleX(1);
 }
 
 .home-projects_btn_p a:hover .circle-arrow,
-.home-news .btn a:hover .circle-arrow{
-    background:#0f65e8;
-    color:#fff;
-    transform:translateX(8px);
+.home-news .btn a:hover .circle-arrow {
+  background: #0f65e8;
+  color: #fff;
+  transform: translateX(8px);
 }
 
 .home-projects h2 {
@@ -1011,16 +1011,16 @@ footer p small {
     font-size: 22px;
   }
 
-  .circle-arrow{
-      width:42px;
-      height:42px;
-      font-size:15px;
+  .circle-arrow {
+    width:42px;
+    height:42px;
+    font-size:15px;
   }
 
   .home-projects_btn_p a,
-  .home-news .btn a{
-      gap:18px;
-      font-size:17px;
+  .home-news .btn a {
+    gap:18px;
+    font-size:17px;
   }
 
   .home-projects {

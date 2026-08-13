@@ -1,27 +1,34 @@
 [
-    {
+     {
         "category":"news",
-        "date":"2026.07.15",
-        "title":"「埼玉ユースイノベーション機構」公式サイトをオープンしました",
-        "image":"images/news/20260201_1.png",
-        "url":"index.html"
-    },
-    {
-        "category":"report",
-        "date":"2026.07.05",
-        "title":"高校生向けビジネスワークショップを開催しました",
-        "image":"images/projects/SoonNewProject.png",
+        "date":"2026.08.05",
+        "title":"「InQubiz」に参加していただく皆様が見やすくなるよう、InQubiz公式サイトのリニューアルを行いました。",
+        "image":"images/news/20260503.jpg",
         "url":"https://inqubiz.main.jp/"
     },
     {
         "category":"news",
+        "date":"2026.07.15",
+        "title":"「埼玉ユースイノベーション機構」公式サイトをオープンしました",
+        "image":"images/news/20260216.png",
+        "url":"index.html"
+    },
+    {
+        "category":"inqubiz",
+        "date":"2026.07.05",
+        "title":"二次審査からの新規受付開始および開催日程変更のお知らせ",
+        "image":"images/news/20260503.jpg",
+        "url":"https://inqubiz.main.jp/Reschedule.html"
+    },
+    {
+        "category":"inqubiz",
         "date":"2026.05.04",
         "title":"「InQubiz」エントリー受付（ビジネス部門）を開始しました",
         "image":"images/news/20260504_2.jpg",
         "url":"https://inqubiz.main.jp/"
     },
     {
-        "category":"news",
+        "category":"inqubiz",
         "date":"2026.05.04",
         "title":"「InQubiz」エントリー受付（探究部門）を開始しました",
         "image":"images/news/20260504_1.png",
@@ -36,9 +43,9 @@
     },
     {
         "category":"news",
-        "date":"2026.02.01",
+        "date":"2026.02.16",
         "title":"埼玉ユースイノベーション機構を結成しました",
-        "image":"images/news/20260201_1.png",
+        "image":"images/news/20260216.png",
         "url":"about.html"
     }
 ]

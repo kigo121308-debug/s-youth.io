@@ -13,15 +13,28 @@
   },
 
   {
-    "id": "event-1",
-    "title": "イベント",
-    "category": "event",
-    "categoryName": "イベント",
-    "subtitle": "",
-    "description": "続報をお待ちください！",
-    "image": "images/projects/SoonNewProject.png",
-    "url": "",
-    "status": "coming-soon",
+    "id": "syio-lab",
+    "title": "SYIO-Lab",
+    "category": "syio-lab",
+    "categoryName": "SYIOLab",
+    "subtitle": " ",
+    "description": "SYIOラボは、イノベーションを担う人材及び、様々な分野で将来的に活躍する人材の育成を目的としたワークショップイベントです。",
+    "image": "images/projects/Project_SyioLAB.png",
+    "url": "SYIOLab.html",
+    "status": "active",
+    "featured":true
+  },
+
+  {
+    "id": "syio-lab-event-1",
+    "title": "AI事業開発体験ワークショップ",
+    "category": "syio-lab",
+    "categoryName": "SYIOLab",
+    "subtitle": "AIで、社会を満たせ！",
+    "description": "SYIOラボは、イノベーションを担う人材及び、様々な分野で将来的に活躍する人材の育成を目的としたワークショップイベントです。",
+    "image": "images/projects/syiolab/Project_20260817.png",
+    "url": "SYIOLab-Vol01.html",
+    "status": "active",
     "featured":true
   },
 
@@ -36,18 +49,5 @@
     "url": "",
     "status": "coming-soon",
     "featured":true
-  },
-
-  {
-    "id": "coming-soon-2",
-    "title": "新規プロジェクト準備中終了",
-    "category": "end",
-    "categoryName": "終了",
-    "subtitle": "",
-    "description": "続報をお待ちください！",
-    "image": "images/projects/SoonNewProject.png",
-    "url": "",
-    "status": "coming-soon",
-    "featured":false
   }
 ]

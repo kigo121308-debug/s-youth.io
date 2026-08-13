@@ -32,7 +32,7 @@ fetch("data/news.json")
                     </p>
 
                     <p>
-                        <a href="${item.url}" ${target}>
+                        <a href="${item.url}" ${target} target="_blank">
                             ${item.title}
                         </a>
                     </p>

@@ -17,7 +17,7 @@ form.addEventListener("submit", async (e) => {
 
   try {
 
-    const response = await fetch("https://script.google.com/macros/s/AKfycbxrO0LXkiCetT0-uKl2oFvp2WuvwHxAw75qAzbPTeyILnU8H2AWKIP0R04ktqthMUMsvA/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbwAEAXkvYGqVqagRDpBTQz3fEWBYhoiww0BD5HtsyiounXWqevVETnyG7ujIJs-2o8iHw/exec", {
       method: "POST",
       body: formData
     });

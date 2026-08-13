@@ -65,7 +65,5 @@ const observer = new IntersectionObserver((entries)=>{
 targets.forEach((target,index)=>{
 
   target.style.transitionDelay = `${index * 0.08}s`;
-
   observer.observe(target);
-
 });

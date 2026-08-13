@@ -38,7 +38,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     projects = await response.json();
 
-    filteredProjects = [...projects];
+    filteredProjects = projects.filter(
+    project =>
+    project.category !== 'syio-lab' ||
+    project.id === 'syio-lab'
+    );
+
+     // 構造化データを生成
+    createProjectsStructuredData(projects);
 
     createFilterButtons();
 
@@ -81,7 +88,14 @@ function renderPagination() {
 
   pagination.innerHTML = '';
 
-  const totalPages = Math.ceil(filteredProjects.length / ITEMS_PER_PAGE);
+  // プロジェクトが5件以下ならページネーションを非表示
+  if (filteredProjects.length <= 5) {
+    return;
+  }
+
+  const totalPages = Math.ceil(
+    filteredProjects.length / ITEMS_PER_PAGE
+  );
 
   // 前へ
   if (currentPage > 1) {
@@ -261,17 +275,41 @@ function addFilterEvents() {
 
       const category = button.dataset.category;
 
+
       if (category === 'all') {
 
-        filteredProjects = [...projects];
+        // すべて
+        // SYIOLaboイベントだけ除外
+        // SYIOLabo本体は表示
+        filteredProjects = projects.filter(
+          project =>
+            project.category !== 'syio-lab' ||
+            project.id === 'syio-lab'
+        );
+
+
+      } else if (category === 'syio-lab') {
+
+        // SYIOLabo
+        // SYIOLabo本体は除外
+        // イベントだけ表示
+        filteredProjects = projects.filter(
+          project =>
+            project.category === 'syio-lab' &&
+            project.id !== 'syio-lab'
+        );
+
 
       } else {
 
-        filteredProjects = projects.filter(project =>
-          project.category === category
+        // その他のカテゴリー
+        filteredProjects = projects.filter(
+          project =>
+            project.category === category
         );
 
       }
+
 
       currentPage = 1;
 
@@ -281,6 +319,114 @@ function addFilterEvents() {
     });
 
   });
+
+}
+
+/**
+ * プロジェクト構造化データ生成
+ */
+function createProjectsStructuredData(data) {
+
+  const itemList = {
+
+    "@context": "https://schema.org",
+
+    "@type": "ItemList",
+
+    "@id": "https://s-youth.jp/projects.html#itemlist",
+
+    "name": "プロジェクト・イベント",
+
+    "url": "https://s-youth.jp/projects.html",
+
+    "numberOfItems": data.length,
+
+    "itemListElement": data.map((project, index) => {
+
+      const imageUrl =
+        new URL(
+          project.image,
+          "https://s-youth.jp/"
+        ).href;
+
+
+      const item = {
+
+        "@type": "Thing",
+
+        "name": project.title,
+
+        "description": project.description,
+
+        "image": imageUrl
+
+      };
+
+
+      // URLがあるプロジェクトのみ追加
+      if (project.url) {
+
+        let projectUrl = project.url;
+
+        if (!projectUrl.startsWith('http')) {
+
+          projectUrl =
+            new URL(
+              projectUrl,
+              "https://s-youth.jp/"
+            ).href;
+
+        }
+
+        item.url = projectUrl;
+
+      }
+
+
+      return {
+
+        "@type": "ListItem",
+
+        "position": index + 1,
+
+        "name": project.title,
+
+        "item": item
+
+      };
+
+    })
+
+  };
+
+
+  // 既存の構造化データがあれば削除
+  const oldScript =
+    document.getElementById(
+      'projects-itemlist-structured-data'
+    );
+
+  if (oldScript) {
+
+    oldScript.remove();
+
+  }
+
+
+  // JSON-LD生成
+  const script =
+    document.createElement('script');
+
+  script.type =
+    'application/ld+json';
+
+  script.id =
+    'projects-itemlist-structured-data';
+
+  script.textContent =
+    JSON.stringify(itemList);
+
+  document.head.appendChild(script);
 
 }
 
@@ -299,7 +445,7 @@ window.addEventListener('resize', () => {
   ITEMS_PER_PAGE = newItemsPerPage;
 
   // ページ数が減った場合の対策
-  const totalPages = Math.ceil(projects.length / ITEMS_PER_PAGE);
+  const totalPages = Math.ceil(filteredProjects.length / ITEMS_PER_PAGE);
 
   if (currentPage > totalPages) {
     currentPage = totalPages;
